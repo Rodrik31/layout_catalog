@@ -1,1 +1,60 @@
-/* TODO: Add styles for this component */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+
+  &__link {
+  margin-left: 50px;
+  height: 40px;
+  width: 40px;
+  }
+}
+
+.nav {
+  margin-right: 50px;
+
+  &__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__links {
+    display: block;
+    justify-content: space-between;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #000;
+  }
+
+  &__links:hover {
+    color: $primaryColor;
+  }
+}
+
+.is-active {
+  color: $primaryColor;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $primaryColor;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+}
