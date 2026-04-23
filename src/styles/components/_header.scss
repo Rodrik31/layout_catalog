@@ -36,18 +36,18 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 60px;
-    color: $secondaryColor;
+    color: $secondary-color;
   }
 
   &__links:hover {
     @include with-smooth-transition;
 
-    color: $primaryColor;
+    color: $primary-color;
   }
 }
 
 .is-active {
-  color: $primaryColor;
+  color: $primary-color;
   position: relative;
 }
 
@@ -57,7 +57,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: $primaryColor;
+  background-color: $primary-color;
   height: 4px;
   width: 100%;
   border-radius: 8px;

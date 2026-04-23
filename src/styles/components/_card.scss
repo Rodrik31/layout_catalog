@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid $cardBorderColor;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
-  width: $columnsWidth;
+  width: $card-width;
   height: 406px;
   background-color: $white;
   padding: 0 16px;
+  margin-bottom: 2px;
 
   &__image {
     background-image: url(../images/imac.jpeg);
@@ -26,7 +27,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: $secondaryColor;
+    color: $secondary-color;
     margin-top: 40px;
   }
   &__code {
@@ -50,7 +51,7 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: $secondaryColor;
+    color: $secondary-color;
     transform: translateY(-1px);
   }
   &__price {
@@ -72,7 +73,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: $secondaryColor;
+    color: $secondary-color;
   }
   &__button {
     @include with-smooth-transition;
@@ -84,7 +85,7 @@
     width: 166px;
     height: 40px;
     border: 1px solid transparent;
-    background-color: $primaryColor;
+    background-color: $primary-color;
     border-radius: 5px;
     font-family: inherit;
     font-weight: 700;
@@ -97,8 +98,8 @@
       @include with-smooth-transition;
 
       background-color: $white;
-      color: $primaryColor;
-      border: 1px solid $primaryColor;
+      color: $primary-color;
+      border: 1px solid $primary-color;
       border-radius: 5px;
     }
   }
@@ -109,7 +110,7 @@
     transform-origin: center;
 
     .card__title {
-      color: $cardTitleHoverColor;
+      color: $card-title-hover-color;
     }
   }
 }
