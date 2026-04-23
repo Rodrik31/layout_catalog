@@ -1,15 +1,17 @@
 .card {
+  @include with-smooth-transition;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box;
   align-items: center;
   border: 1px solid $cardBorderColor;
   border-radius: 5px;
-  width: 200px;
+  width: $columnsWidth;
   height: 406px;
   background-color: $white;
   padding: 0 16px;
+
   &__image {
     background-image: url(../images/imac.jpeg);
     background-size: 100% 100%;
@@ -24,7 +26,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: $black;
+    color: $secondaryColor;
     margin-top: 40px;
   }
   &__code {
@@ -48,7 +50,8 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: $black;
+    color: $secondaryColor;
+    transform: translateY(-1px);
   }
   &__price {
     display: flex;
@@ -69,11 +72,12 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: $black;
+    color: $secondaryColor;
   }
   &__button {
+    @include with-smooth-transition;
+
     display: flex;
-    box-sizing: border-box;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -90,10 +94,22 @@
     text-transform: uppercase;
     margin-top: 16px;
     &:hover {
+      @include with-smooth-transition;
+
       background-color: $white;
       color: $primaryColor;
       border: 1px solid $primaryColor;
       border-radius: 5px;
+    }
+  }
+  &:hover {
+    @include with-smooth-transition;
+
+    transform: scale(1.2);
+    transform-origin: center;
+
+    .card__title {
+      color: $cardTitleHoverColor;
     }
   }
 }
